@@ -26,7 +26,7 @@ connection.connect(function(err) {
     console.log('connected as id ' + connection.threadId);
   });
  
-connection.query('select t.digital_document_id ,td.file_extention,t.document from tbl_digital_documents t LEFt JOIN tbl_digital_document_details td on td.digital_doc_detail_id= t.digital_doc_detail_id where td.file_extention IS NOT NULL and td.file_extention!=""  and t.document is not null and t.document!="" limit 100 ', function (error, results, fields) {
+connection.query('select t.digital_document_id ,td.file_extention,t.document from tbl_digital_documents t LEFt JOIN tbl_digital_document_details td on td.digital_doc_detail_id= t.digital_doc_detail_id where td.file_extention IS NOT NULL and td.file_extention!=""  and t.document is not null and t.document!="" ', function (error, results, fields) {
   
 if (error) throw error;
 
